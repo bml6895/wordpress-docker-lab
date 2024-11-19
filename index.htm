@@ -42,7 +42,7 @@ div.WordSection1
 
 <div class=WordSection1>
 
-<p class=MsoNormal><b>1: Windows -  install docker</b></p>
+<p class=MsoNormal><b>1: Windows - Â install docker</b></p>
 
 <p class=MsoNormal>Go to the docker website and install docker</p>
 
@@ -54,13 +54,13 @@ div.WordSection1
 
 <p class=MsoNormal>Run mkdir wordpress-docker</p>
 
-<p class=MsoNormal>                cd wordpress-docker</p>
+<p class=MsoNormal>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  cd wordpress-docker</p>
 
 <p class=MsoNormal>&nbsp;</p>
 
 <p class=MsoNormal>Create a docker-compse.yml file</p>
 
-<p class=MsoNormal>                Notepad docker-compose.yml</p>
+<p class=MsoNormal>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  Notepad docker-compose.yml</p>
 
 <p class=MsoNormal>&nbsp;</p>
 
@@ -71,69 +71,71 @@ div.WordSection1
 
 <p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>services:</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>  wordpress:</span></p>
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â  wordpress:</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>    image:
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â  image:
 wordpress:latest</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>    ports:</span></p>
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â  ports:</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>      -
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â Â Â  -
 &quot;8080:80&quot;</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>   
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â 
 environment:</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â Â Â 
 WORDPRESS_DB_HOST: db</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â Â Â 
 WORDPRESS_DB_USER: user</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â Â Â 
 WORDPRESS_DB_PASSWORD: password</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â Â Â 
 WORDPRESS_DB_NAME: wordpress</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>   
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â 
 depends_on:</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>      - db</span></p>
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â Â Â  - db</span></p>
 
 <p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>&nbsp;</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>  db:</span></p>
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â  db:</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>    image:
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â  image:
 mysql:5.7</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>   
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â 
 environment:</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â Â Â 
 MYSQL_ROOT_PASSWORD: rootpassword</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â Â Â 
 MYSQL_DATABASE: wordpress</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â Â Â 
 MYSQL_USER: user</span></p>
 
-<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>Â Â Â Â Â 
 MYSQL_PASSWORD: password</span></p>
 
 <p class=MsoNormal>Run docker compose</p>
 
-<p class=MsoNormal>                docker-compose up -d</p>
+<p class=MsoNormal>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  docker-compose up -d</p>
 
 <p class=MsoNormal>&nbsp;</p>
 
 <p class=MsoNormal>Open a browser and navigate to: <a
 href="http://localhost:8080">http://localhost:8080</a> </p>
 
-<p class=MsoNormal>Complete the setup and create an account – when you are done
+<p class=MsoNormal>Complete the setup and create an account â€“ when you are done
 the admin screen will look like this at the top:<br>
+	<img src="Screenshot 2024-11-18 195256.png" alt="WordPress Admin Screenshot">
+
 <br>
 <br>
 </p>
