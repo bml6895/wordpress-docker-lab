@@ -1,0 +1,145 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#467886;
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-family:"Aptos",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#467886" vlink="#96607D" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b>1: Windows -  install docker</b></p>
+
+<p class=MsoNormal>Go to the docker website and install docker</p>
+
+<p class=MsoNormal>Sign in with github</p>
+
+<p class=MsoNormal><b>2: Setup Wordpress</b></p>
+
+<p class=MsoNormal>Open PowerShell</p>
+
+<p class=MsoNormal>Run mkdir wordpress-docker</p>
+
+<p class=MsoNormal>                cd wordpress-docker</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Create a docker-compse.yml file</p>
+
+<p class=MsoNormal>                Notepad docker-compose.yml</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Add the following content to the file:</p>
+
+<p class=MsoNormal><br>
+<span style='font-size:7.0pt;line-height:107%'>version: '3.8'</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>services:</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>  wordpress:</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>    image:
+wordpress:latest</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>    ports:</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>      -
+&quot;8080:80&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>   
+environment:</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+WORDPRESS_DB_HOST: db</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+WORDPRESS_DB_USER: user</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+WORDPRESS_DB_PASSWORD: password</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+WORDPRESS_DB_NAME: wordpress</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>   
+depends_on:</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>      - db</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>  db:</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>    image:
+mysql:5.7</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>   
+environment:</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+MYSQL_ROOT_PASSWORD: rootpassword</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+MYSQL_DATABASE: wordpress</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+MYSQL_USER: user</span></p>
+
+<p class=MsoNormal><span style='font-size:7.0pt;line-height:107%'>     
+MYSQL_PASSWORD: password</span></p>
+
+<p class=MsoNormal>Run docker compose</p>
+
+<p class=MsoNormal>                docker-compose up -d</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Open a browser and navigate to: <a
+href="http://localhost:8080">http://localhost:8080</a> </p>
+
+<p class=MsoNormal>Complete the setup and create an account – when you are done
+the admin screen will look like this at the top:<br>
+<br>
+<br>
+</p>
+
+</div>
+
+</body>
+
+</html>
